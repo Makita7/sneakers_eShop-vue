@@ -32,7 +32,6 @@
         padding: 1rem;
         background-color: white;
         z-index: 4;
-        position: absolute;
         width: 100%;
         box-sizing: content-box;
     }

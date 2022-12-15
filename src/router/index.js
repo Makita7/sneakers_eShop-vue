@@ -21,13 +21,13 @@ export const routes = [
     {
         name: 'women',
         id: 3,
-        path: '/',
+        path: '/women',
         component: () => import('../views/View_Women.vue'),
     },
     {
         name: 'men',
         id: 4,
-        path: '/',
+        path: '/men',
         component: () => import('../views/View_Men.vue'),
     },
     {

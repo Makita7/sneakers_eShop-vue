@@ -20,6 +20,10 @@
             <div class="navbar">
                 <img src="../assets/icon-close.svg" class="Xclose" @click="$emit('ToggleOpenNav')" />
                 <RouterLink to="/" @click="$emit('ToggleOpenNav')" class="link" >Collections</RouterLink>
+                <RouterLink to="/men" @click="$emit('ToggleOpenNav')" class="link" >Men</RouterLink>
+                <RouterLink to="/women" @click="$emit('ToggleOpenNav')" class="link" >Women</RouterLink>
+                <RouterLink to="/about" @click="$emit('ToggleOpenNav')" class="link" >About</RouterLink>
+                <RouterLink to="/contact" @click="$emit('ToggleOpenNav')" class="link" >Contact</RouterLink>
             </div>
         </div>
     </transition>
@@ -59,6 +63,7 @@
         font-size: 1.3rem;
         color: black;
         margin-left: 1rem;
+        margin-bottom: 2rem;
     }
     .v-enter-active,
     .v-leave-active {
