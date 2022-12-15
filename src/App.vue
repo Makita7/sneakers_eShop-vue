@@ -1,7 +1,9 @@
 <script setup>
   import '@fortawesome/free-solid-svg-icons';
-  import { onMounted, ref } from 'vue';
+  import { ref } from 'vue';
+  import { RouterView } from 'vue-router';
   import BaseHeader from './components/BaseHeader.vue';
+  import BaseCelNavbarVue from './components/BaseCelNavbar.vue';
 
   let OpenNav = ref(false);
   const num = ref(1);
@@ -61,13 +63,10 @@
 
 <template>
   <BaseHeader @ToggleOpenNav="ToggleOpenNav()" :OpenNav="OpenNav" />
-  <div v-if="OpenNav" class="navbarBackground">
-    <div class="navbar">
-      <img src="./assets/icon-close.svg" class="xmark" @click="ToggleOpenNav()" />
-      navbar Hiiiiiiiiiii
-    </div>
-  </div>
+  <BaseCelNavbarVue @ToggleOpenNav="ToggleOpenNav()" :OpenNav="OpenNav" />
+  <RouterView>
 
+  </RouterView>
   <div class="bannerWrap">
     <img alt="banner shoes" class="banner" src="./assets/shoeWheelBanner.png" />
     <div class="qouteWrapper">
@@ -94,7 +93,7 @@
     left: -18rem;
     width: 150%;
     position: relative;
-    margin-top: 5rem;
+    margin-top: 2.5rem;
     animation-name: InfiniteRotate 50s linear infinite;
     -webkit-animation:InfiniteRotate 50s linear infinite;
     -moz-animation:InfiniteRotate 50s linear infinite;
@@ -138,24 +137,4 @@
   .fixline2{
     right: -6.9rem;
   }
-
-
-  /* navbar */
-  .navbar {
-    background-color: var(--Orange);
-    width: 60%;
-    height: 100%;
-  }
-  .navbarBackground{
-    position: absolute;
-    z-index: +50;
-    backdrop-filter: contrast(0.5);
-    width: 100%;
-    height: 100%;
-    background-color: hsl(0deg 0% 0% / 50%);
-  }
-  .Xclose{
-
-  }
-
 </style>
