@@ -1,5 +1,14 @@
 
-<script>
+<script setup>
+    import { defineProps, defineEmits } from 'vue';
+
+    defineProps ({
+        OpenNav: Boolean
+    });
+
+    defineEmits ([
+        'ToggleOpenNav'
+    ])
 
 </script>
 
@@ -7,7 +16,7 @@
 <template>
     <div class="Wrapper">
         <div class="ContainerOne">
-            <fa class="bars fa-xl iconPad" icon="bars" />
+            <fa class="bars fa-xl iconPad" icon="bars" @click="$emit('ToggleOpenNav')" />
             <img class="logo" alt="logo sneakers" src="../assets/logo.svg" />
         </div>
         <div class="ContainerTwo alignR">
@@ -21,6 +30,11 @@
     .Wrapper{
         display: flex;
         padding: 1rem;
+        background-color: white;
+        z-index: 4;
+        position: absolute;
+        width: 100%;
+        box-sizing: content-box;
     }
     .ContainerOne{
         width: 70%;
@@ -29,9 +43,9 @@
     }
     .ContainerTwo{
         width: 30%;
-    }
-    .alignR{
-        text-align: right;
+        display: flex;
+        margin-right: 3rem;
+        justify-content: end;
     }
     .profile{
         width: 2rem;
@@ -45,8 +59,12 @@
     }
     .bars{
         color: #69707D;
+        padding-right: 1rem;
     }
     .logo{
         height: 1.4rem;
+    }
+    .quote{
+        display: absolute;
     }
 </style>
