@@ -34,6 +34,7 @@
         z-index: 4;
         width: 100%;
         box-sizing: content-box;
+        position: absolute;
     }
     .ContainerOne{
         width: 70%;

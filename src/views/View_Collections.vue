@@ -25,6 +25,7 @@
         -webkit-animation:InfiniteRotate 50s linear infinite;
         -moz-animation:InfiniteRotate 50s linear infinite;
         animation:InfiniteRotate 50s linear infinite;
+        margin-top: 4.5rem;
     }
     .qouteWrapper{
         position: absolute;
