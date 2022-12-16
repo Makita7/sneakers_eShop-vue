@@ -13,52 +13,12 @@
     console.log(OpenNav.value)
   }
 
-  const ProductInformation = ref([
-    {
-      id: 1,
-      price: 500,
-      name: '',
-      description: '',
-      discount: 50,
-      discounted_price: 250,
-      img: '',
-    },
-    // {
-    //   id: 2,
-    //   price: 800,
-    //   name: '',
-    //   description: '',
-    //   discount: 50,
-    //   discounted_price: 250,
-    //   img: '',
-    // },
-    // {
-    //   id: 3,
-    //   price: 450,
-    //   name: '',
-    //   description: '',
-    //   discount: 50,
-    //   discounted_price: 250,
-    //   img: '',
-    // },
-  ]);
 </script>
 
-<!-- use vuex to store the context info
-    and mobile first
--->
+<!-- TODO:  - use vuex to store the context info
+            - mobile first
+            - make a filter in women and men to show the thumbnails of the sneakers that are or the page gender
 
-<!--
-      What data should the app have for the cards
-        *id
-        *price
-        *name
-        *description
-        *discount
-        *discounted price
-        *relative images
-        *collection
-        *gender
 -->
 
 <template>
