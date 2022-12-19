@@ -16,7 +16,7 @@
     <div class="wrapper">
         <div class="showList" v-for="shoe in WShoes">
             <RouterLink :to="shoe.to">
-                <img :src="shoe.img" :alt="shoe.name" />
+                <img :src="shoe.img1" :alt="shoe.name" />
                 <p>{{shoe.name}}</p>
             </RouterLink>
         </div>
