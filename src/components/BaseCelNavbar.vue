@@ -1,7 +1,6 @@
 
 <script setup>
     import { RouterLink } from 'vue-router';
-    import { defineEmits, defineProps } from 'vue';
 
     defineProps ({
         OpenNav: Boolean,
