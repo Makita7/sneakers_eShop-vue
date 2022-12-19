@@ -6,11 +6,10 @@
   import BaseCelNavbarVue from './components/BaseCelNavbar.vue';
 
   let OpenNav = ref(false);
-  const num = ref(1);
+  const ProductId = ref(1);
 
   function ToggleOpenNav() {
     OpenNav.value = !OpenNav.value
-    console.log(OpenNav.value)
   }
 
   // const SneakersData = [

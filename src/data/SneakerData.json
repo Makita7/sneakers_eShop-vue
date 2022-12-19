@@ -13,7 +13,8 @@
         "thumbnail3": "src/assets/thumbnails/products_sneaker0 3-4_thumbnail.jpg",
         "thumbnail4": "src/assets/thumbnails/products_sneaker0 4-4_thumbnail.jpg",
         "collection": "unisex",
-        "stock": 5
+        "stock": 5,
+        "to": "/product-page/fall-bliss"
     },
     {
         "id": 2,
@@ -25,7 +26,8 @@
         "img": "src/assets/product-images/products_sneaker1 1-2.jpg",
         "thumbnail": "src/assets/thumbnails/products_sneaker1 1-2_thumbnail.jpg",
         "collection": "men",
-        "stock": 1
+        "stock": 1,
+        "to": "/product-page/nike-superRep-go"
     },
     {
         "id": 3,
@@ -37,6 +39,7 @@
         "img": "src/assets/product-images/products_sneaker2 1-2.jpg",
         "thumbnail": "src/assets/thumbnails/products_sneaker2 1-2_thumbnail.jpg",
         "collection": "women",
-        "stock": 8
+        "stock": 8,
+        "to": "/product-page/nike-air-force1"
     }
 ]

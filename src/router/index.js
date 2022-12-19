@@ -41,9 +41,23 @@ export const routes = [
         id: 6,
         path: '/product-page',
         component: () => import('../views/View_Product.vue'),
-        // children: [
-        //     {}
-        // ]
+        children: [
+            {
+                name: 'fall-bliss',
+                path: '/product-page/fall-bliss',
+                component: () => import( /* webpackChunkName: "fall-bliss"*/ '../views/Child_Product_Views/View_Product_fall-bliss.vue' )
+            },
+            {
+                name: 'nike-superRep-go',
+                path: '/product-page/nike-superRep-go',
+                component: () => import( /* webpackChunkName: "nike-superRep-go"*/ '../views/Child_Product_Views/View_Product_nike-air-force1.vue' )
+            },
+            {
+                name: 'nike-air-force1',
+                path: '/product-page/nike-air-force1',
+                component: () => import( /* webpackChunkName: "nike-air-force1"*/ '../views/Child_Product_Views/View_Product_nike-superRep-go.vue' )
+            },
+        ]
     },
 ];
 
