@@ -14,8 +14,10 @@
 <template>
     <div class="wrapper">
         <div class="showList" v-for="shoe in MShoes">
-            <p>{{shoe.name}}</p>
-            <img :src="shoe.img" :alt="shoe.name" />
+            <RouterLink :to="shoe.to">
+                <img :src="shoe.img1" :alt="shoe.name" />
+                <p>{{shoe.name}}</p>
+            </RouterLink>
         </div>
     </div>
 </template>
@@ -35,5 +37,9 @@
     text-align: center;
     font-weight: 600;
     text-transform: capitalize;
+    color: black;
+}
+a{
+    text-decoration: none;
 }
 </style>

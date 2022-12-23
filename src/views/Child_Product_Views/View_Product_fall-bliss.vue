@@ -59,6 +59,8 @@
     .addBtn{
         display: flex;
         justify-content: space-around;
+        background-color: var(--LightGrayishBlue);
+        border-radius: 10px;
     }
     .addBtn button{
         font-size: 2rem;
@@ -85,7 +87,7 @@
     img.addMmnus {
         width: 1rem;
         height: 1rem;
-        margin-top: 1.4rem;
+        margin-top: 2rem;
     }
     .counter{
         font-weight: 600;
