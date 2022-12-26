@@ -11,6 +11,8 @@
   --LightGrayishBlue: hsl(223, 64%, 98%);
   --White: hsl(0, 0%, 100%);
   --Black: hsl(0, 0%, 0%); /*with 75% opacity for lightbox background*/
+  --swiper-navigation-color: #000000;
+  --swiper-navigation-size: 20px !important;
 }
 
 body{
@@ -26,4 +28,17 @@ p{
 }
 .middle{
   align-items: center;
+}
+
+.swiper-button-next {
+  background-color: white !important;
+  padding: 0.5rem 0.7rem;
+  border-radius: 50px;
+  filter: drop-shadow(0 0 0.75rem rgba(53, 49, 49, 0.4));
+}
+.swiper-button-prev {
+  background-color: white;
+  padding: 0.5rem 0.7rem;
+  border-radius: 50px;
+  filter: drop-shadow(0 0 0.75rem rgba(53, 49, 49, 0.4));
 }

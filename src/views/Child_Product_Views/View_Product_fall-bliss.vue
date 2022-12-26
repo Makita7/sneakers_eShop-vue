@@ -1,6 +1,10 @@
 
 <script setup>
     import { ref, computed } from 'vue';
+    import { Swiper, SwiperSlide } from 'swiper/vue';
+    import { Navigation, Pagination } from 'swiper';
+    import 'swiper/css';
+    import 'swiper/css/navigation';
     import SneakerData from '../../data/SneakerData.json';
 
     const shoes = ref(SneakerData);
@@ -9,14 +13,44 @@
         return shoes.value.filter( s => s.id === 1 );
     });
 
+    const onSwiper = (swiper) => {
+        console.log(swiper);
+    };
+    const onSlideChange = () => {
+        console.log('slide change');
+    };
+
 </script>
+
+    // TODO: what if I add
 
 <template>
     <div class="wrapper">
         <div v-for="i in Shoe" :key="i.id" class="ProdCard">
-            <div class="ImgWrap">
-                <img :src="i.img1" :alt="i.name" class="slider" />
-            </div>
+            <Swiper
+                :slides-per-view="1"
+                :space-between="50"
+                :modules="[Navigation, Pagination]"
+                navigation
+                :pagination="{clickable:true}"
+                @swiper="onSwiper"
+                @slideChange="onSlideChange"
+                class="ImgWrap"
+            >
+                <SwiperSlide :v-if="i.img1">
+                    <img :src="i.img1" :alt="i.name" class="sliderImg"/>
+                </SwiperSlide>
+                <SwiperSlide :v-if="i.img2">
+                    <img :src="i.img2" :alt="i.name" class="sliderImg"/>
+                </SwiperSlide>
+                <SwiperSlide :v-if="i.img3">
+                    <img :src="i.img3" :alt="i.name" class="sliderImg"/>
+                </SwiperSlide>
+                <SwiperSlide :v-if="i.img4">
+                    <img :src="i.img4" :alt="i.name" class="sliderImg"/>
+                </SwiperSlide>
+            </Swiper>
+
             <div class="TextWrap">
                 <p class="brand">{{i.brand}}</p>
                 <h3>{{i.name}}</h3>
@@ -45,17 +79,20 @@
 </template>
 
 <style scoped>
+    /* Swripper */
     .wrapper {
         padding-top: 2rem;
     }
-    .slider{
+    .swiper-wrapper {
+        display: inline-flex !important;
+    }
+    .sliderImg{
         width: 100%;
         margin-top: -1rem;
     }
-    .ImgWrap{
-        height: 20rem;
-        overflow: hidden;
-    }
+
+
+    /* Card */
     .addBtn{
         display: flex;
         justify-content: space-around;
