@@ -8,6 +8,7 @@
     import SneakerData from '../../data/SneakerData.json';
 
     const shoes = ref(SneakerData);
+    const counter = ref(0);
 
     const Shoe = computed(() => {
         return shoes.value.filter( s => s.id === 1 );
@@ -16,13 +17,25 @@
     const onSwiper = (swiper) => {
         console.log(swiper);
     };
+
     const onSlideChange = () => {
         console.log('slide change');
     };
 
-</script>
+    // function AddShoe() {
+    //     // if( counter < Shoe.value.stock ){
+    //     //     console.log("in stock");
+    //     //     return this.counter.value + 1
+    //     // }else{
+    //     //     console.log("nope")
+    //     // }
+    //     console.log('blah')
+    // }
+    // function HiThere(){
+    //     console.log('hi there')
+    // }
 
-    // TODO: what if I add
+</script>
 
 <template>
     <div class="wrapper">
@@ -65,10 +78,8 @@
             </div>
             <div class="addBtn">
                 <img src="../../assets/icon-minus.svg" alt="less button" class="addMmnus" />
-                <!-- <button>-</button> -->
-                <p class="counter">0</p>
-                <!-- <button>+</button> -->
-                <img src="../../assets/icon-plus.svg" alt="add button" class="addMmnus" />
+                <p class="counter">{{ counter }}</p>
+                <!-- <img @click="HiThere()" src="../../assets/icon-plus.svg" alt="add button" class="addMmnus" /> -->
             </div>
             <button class="addCart">
                 <img class="shopcart" alt="shop cart" src="../../assets/icon-cart-white.png" />

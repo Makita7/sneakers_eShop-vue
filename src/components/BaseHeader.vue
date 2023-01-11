@@ -1,6 +1,6 @@
 
 <script setup>
-    import { defineProps, defineEmits } from 'vue';
+    import { RouterLink } from 'vue-router'
 
     defineProps ({
         OpenNav: Boolean
@@ -16,8 +16,10 @@
 <template>
     <div class="Wrapper">
         <div class="ContainerOne">
-            <fa class="bars fa-xl iconPad" icon="bars" @click="$emit('ToggleOpenNav')" />
-            <img class="logo" alt="logo sneakers" src="../assets/logo.svg" />
+            <img class="bars iconPad" src="../assets/icon-menu.svg" @click="$emit('ToggleOpenNav')" />
+            <RouterLink to="/">
+                <img class="logo" alt="logo sneakers" src="../assets/logo.svg" />
+            </RouterLink>
         </div>
         <div class="ContainerTwo alignR">
             <img class="cart iconPad" alt="cart icon" src="../assets/icon-cart.png" />
